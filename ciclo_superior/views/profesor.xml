@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.actions.act_window" id="action_profesor_list">
+        <field name="name">ciclo_superior window</field>
+        <field name="res_model">instituto.profesor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="instituto_profesor_view_profesor">
+      <field name="name">ciclo_superior list</field>
+      <field name="model">instituto.profesor</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="id_modelo"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    
+    <menuitem name="Gestion Instituto" id="ciclo_superior_menu"/>
+    <menuitem name="Profesores" id="ciclo_superior_profesores" parent="ciclo_superior_menu"
+              action="action_profesor_list"/>
+
+
+
+  </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.actions.act_window" id="action_ciclo_list">
+        <field name="name">ciclo_superior window</field>
+        <field name="res_model">instituto.ciclo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="instituto_ciclo_view_ciclo">
+      <field name="name">ciclo_superior list</field>
+      <field name="model">instituto.ciclo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="id_modulos"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    
+    <menuitem name="Gestion Instituto" id="ciclo_superior_menu"/>
+    <menuitem name="Ciclos" id="ciclo_superior_ciclos" parent="ciclo_superior_menu"
+              action="action_ciclo_list"/>
+  </data>
+</odoo>

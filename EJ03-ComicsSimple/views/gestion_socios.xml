@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='gestion_model_action' model='ir.actions.act_window'>
+        <field name="name">Gestión de socios</field>
+        <field name='res_model'>biblioteca.socio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Mi biblioteca (Simple)" id="biblioteca_base_menu" />
+    <menuitem name="Socio" parent="biblioteca_base_menu" id="gestion_socio_menu" action="gestion_model_action"/>
+
+    <record id="gbiblioteca_socio_view_tree" model="ir.ui.view">
+        <field name="name">Formulario de gestión de socios</field>
+        <field name="model">biblioteca.socio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="nombre"/>
+                <field name="apellido"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
