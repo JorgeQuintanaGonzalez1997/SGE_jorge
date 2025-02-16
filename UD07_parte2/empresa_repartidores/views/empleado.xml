@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="empresa_repartidores.list">
+      <field name="name">empresa_repartidores list</field>
+      <field name="model">empresa.empleado</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="foto"/>
+          <field name="carnet"/>
+          <field name="telefono"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="empresa_empleado_action">
+      <field name="name">Empleados</field>
+      <field name="res_model">empresa.empleado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="empresa_repartidores" id="menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Empleados" id="menu_5" parent="menu_root"/>
+    
+
+    <!-- actions -->
+
+    <menuitem name="Empleados" id="menu_empleados" parent="menu_5"
+              action="empresa_empleado_action"/>
+    
+
+  </data>
+</odoo>
