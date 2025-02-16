@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_empresa_empleados,acl_nombre_empresa_empleados,model_empresa_empleado,,1,1,1,1
-acl_empresa_vehiculo,acl_nombre_empresa_vehiculos,model_empresa_vehiculo,,1,1,1,1
-acl_empresa_cliente,acl_nombre_empresa_cliente,model_empresa_cliente,,1,1,1,1
-acl_empresa_reparto,acl_nombre_empresa_reparto,model_empresa_reparto,,1,1,1,1
