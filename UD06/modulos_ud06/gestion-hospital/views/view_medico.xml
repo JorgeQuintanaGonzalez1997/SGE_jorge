@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="medicos_list">
+      <field name="name">Gestion-Hospital list</field>
+      <field name="model">hospital.medico</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="apellidos"/>
+          <field name="numeroColegiado"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_medico">
+      <field name="name">Gestion-Hospital window</field>
+      <field name="res_model">hospital.medico</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <menuitem name="Gestion Hospital" id="hospital_base_menu"/>
+    <menuitem name="Médicos" id="hospital_medicos_menu" parent="hospital_base_menu" action="action_medico"/>
+
+  </data>
+</odoo>
