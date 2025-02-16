@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="empresa_repartidores.list">
+      <field name="name">empresa_vehiculos list</field>
+      <field name="model">empresa.vehiculo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="tipo"/>
+          <field name="foto"/>
+          <field name="matricula"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="empresa_vehiculo_action">
+      <field name="name">Vehiculos</field>
+      <field name="res_model">empresa.vehiculo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="empresa_repartidores" id="menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Vehiculos" id="menu_3" parent="menu_root"/>
+    
+
+    <!-- actions -->
+
+    <menuitem name="Vehiculos" id="menu_vehiculos" parent="menu_3"
+              action="empresa_vehiculo_action"/>
+    
+
+  </data>
+</odoo>
